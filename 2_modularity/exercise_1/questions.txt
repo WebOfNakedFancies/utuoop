@@ -1,0 +1,13 @@
+> What is the value of the variable result at the end of the program 
+> when the variable nums refers to the array [1, 2] accepted by the routine avg?
+
+1.0 : operation is on integers, so 3/2 = 1; then converted to Float when returning
+
+
+> What about when the array is empty?
+
+result is not set :
+we try to set the variable in the try block,
+but fail with an exception, 
+so result is not set,
+nor is it set in the catch part. 

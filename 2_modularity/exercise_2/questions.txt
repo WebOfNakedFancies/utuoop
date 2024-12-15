@@ -1,0 +1,30 @@
+> Task: What principle of data protection would you choose in the case of the
+> Book type when you want to serve the two different roles mentioned:
+> 
+> A library customer makes a search query and you want to offer the customer a
+> view that only supports reading the books.
+> 
+> Library staff want to permanently edit the information of a specific book.
+> 
+> Describe the mechanisms you choose and their consequences for class features,
+> class invariant, and usage. It will suffice to focus mainly on the Book type.
+> For simplicity, we can assume that the database is an array (Book[]) or a list
+> (List<Book>) of books (you can choose either - arrays should be familiar to you
+> from previous courses). You may also implement the program if you wish, but
+> just creating the specifications is enough.
+
+
+
+We can use Wrapper Objects, giving students an array of ImmutableBooks,
+with each ImmutableBook object containing a Book object as a private variable,
+with getter methods calling the Book's getter,
+and with no setter methods.
+
+An array of Books would be given to library staff, with Books having setter methods too.
+
+
+Class invariants should be set to ensure the meaningfulness of the Books' fields,
+but the values themselves are not fixed.
+
+Since ImmutableBooks Book variable contains a reference,
+if the fields of the Book are updated, they are also updated when querying for them using an ImmutableBook.
